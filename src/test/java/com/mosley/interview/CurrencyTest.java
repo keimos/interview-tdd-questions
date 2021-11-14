@@ -10,9 +10,9 @@ public class CurrencyTest {
     void testCurrency() {
         Dollar dollar = new Dollar(5);
         Dollar product = dollar.times(2);
-        assertEquals(10, product.amount);
+        assertEquals(new Dollar(10), product);
         product = dollar.times(3);
-        assertEquals(15, product.amount);
+        assertNotEquals(new Dollar(15), product);
     }
 
     @Test
